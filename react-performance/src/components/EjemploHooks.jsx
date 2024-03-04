@@ -5,7 +5,7 @@ import React, {useMemo, useCallback , useState} from 'react'
 
 
 
-const MiComponente = ({names}) => {
+const MiComponente = () => {
 
     const [name, setName]= useState('');
     const names = [
