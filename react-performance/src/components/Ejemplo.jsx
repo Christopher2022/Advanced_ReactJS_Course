@@ -25,7 +25,7 @@ export default function Ejemplo() {
   return (
     <div>
         <h1>Ejemplo de uso de React Memo</h1>
-        <NombresAleatorios names={names} clearName={clearName}></NombresAleatorios>
+        <NombresAleatorios names={name} clearName={clearName}></NombresAleatorios>
         <button onClick={() => obtainName()}>
             Generar Nombre
         </button>
