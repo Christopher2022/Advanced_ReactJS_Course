@@ -16,7 +16,7 @@ export default function Settings () {
         setConfig((oldConfig) => (
             {
             ...oldConfig,
-            theme: 'light',
+            theme: 'dark',
         }),
         );
     };
@@ -24,7 +24,8 @@ export default function Settings () {
     return (
       <div>
         <h1>APP SETTINGS</h1>
-        <p>Actual Config:{config}</p>
+        <p>Actual Config:{config.theme}</p>
+        <p>Actual Config:{config.lang}</p>
         <button  type="button" onClick={handleClick}>
             Save New Settings
         </button>
