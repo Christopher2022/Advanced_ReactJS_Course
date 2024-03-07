@@ -16,7 +16,7 @@ export default function Settings () {
         setConfig((oldConfig) => (
             {
             ...oldConfig,
-            theme: 'dark',
+            theme: 'light',
         }),
         );
     };
