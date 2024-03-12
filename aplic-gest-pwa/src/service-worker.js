@@ -74,7 +74,7 @@ self.addEventListener('message', (event) => {
 
 // Aquí vamos a poner todo nuestro código custom
 
-const version = "app-V1";
+const version = "app-V4-Front";
 
 self.addEventListener('install', event => {
   console.log(`Instalando versión ${version}`)
