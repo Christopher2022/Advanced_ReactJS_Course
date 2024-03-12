@@ -1,3 +1,33 @@
+# Generación de funcionalidades PWA en aplicación existente
+¿Qué pasos hace falta dar para convertir esta app en una Progressive Web App?
+1. Package.json -> Instalar todas las dependencias de Workbox
+
+"workbox-background-sync": "^6.6.0",
+"workbox-broadcast-update": "^6.6.0",
+"workbox-cacheable-response": "^6.6.0",
+"workbox-core": "^6.6.0",
+"workbox-expiration": "^6.6.0",
+"workbox-google-analytics": "^6.6.1",
+"workbox-navigation-preload": "^6.6.0",
+"workbox-precaching": "^6.6.0",
+"workbox-range-requests": "^6.6.0",
+"workbox-routing": "^6.6.0",
+"workbox-strategies": "^6.6.0",
+"workbox-streams": "^6.6.0"
+
+
+
+2. Crear los archivos relacionados con el service worker(service-worker.js + serviceWorkerRegistration.js)
+
+3. Referenciar el serviceWorker desde index.js
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
