@@ -72,12 +72,22 @@ self.addEventListener('message', (event) => {
 // Any other custom service worker logic can go here.
 // Aquí vamos a poner todo nuestro código custom
 
-const version = "app-compra-v8";
+// const version = "app-compra-v8";
 
 self.addEventListener('install', event => {
-  console.log(`Instalando versión ${version}`)
+  console.log(`Instalando una nueva versión...`);
+  //Verificar si se ha concedido el permiso para mostar notificaciones
+  // if (Notification.permission=== 'granted') {
+    //Se ha concedido el permiso, se puede mostrar la notificación
+    self.registration.showNotification("Existe una nueva versión de la super App!", {body: "Instalada ahora mismo"})
+
+  // }
+
 });
 
+// Sin dejar de presionar "Alt", presiona en el teclado numérico el número "173", que es el número de la
+// letra o símbolo "¡" en el código ASCII.
+
 self.addEventListener('activate', event => {
-  console.log(`Activada versión ${version}!`)
+  console.log(`¡Activada la nueva versión!`)
 });
