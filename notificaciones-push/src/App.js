@@ -25,7 +25,7 @@ const App = (props) => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>**Proyecto PWA - Lista de compra v3**</h1>
+        <h1>**Proyecto PWA - Lista de compra v1**</h1>
         { newServiceWorkerDetected && <div style={{ backgroundColor: 'red', marginBottom: 20 }}>
           <h3>Nueva actualización! ¿Quieres actualizar?</h3>
           <button onClick={onLoadNewServiceWorkerAccept}>Actualizar!</button>

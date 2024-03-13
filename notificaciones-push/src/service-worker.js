@@ -91,3 +91,8 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   console.log(`¡Activada la nueva versión!`)
 });
+
+self.addEventListener('push', event => {
+  const { title , message} = event.data.json();
+  self.registration.showNotification( title, { body: message})
+})
