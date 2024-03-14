@@ -3,7 +3,7 @@ import './App.css';
 import Updater from './components/sw/Updater';
 
 function App() {
-  const version = "app-V4-Front";
+  const version = "app-V3-Front";
   return (
     <div className="App">
       <h1 className='h1-color'>Versión {version}</h1>

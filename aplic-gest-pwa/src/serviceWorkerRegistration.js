@@ -10,6 +10,12 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
 
+const vapidKeys = {
+  "publicKey":"BJHMp6MN_Elmu2UO0PN5i9kSXyEHK4GiFiOdWqKQK4WsjRC-CejLUXoztI151p-y_ukT8qG5Kf3T78KE3L285kY",
+  "privateKey":"pXTl7L4uhdltycm7zS54dfeUp1jJcUdVgAkvVU-s_ss"
+};
+
+
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -56,6 +62,13 @@ function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
+      registration.pushManager.getSubscription()
+      .then( sub => {
+          registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey:vapidKeys.publicKey
+          })
+      })
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
