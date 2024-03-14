@@ -85,7 +85,8 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('push', event => {
-  self.registration.showNotification("Notificación recibida", {
-    body: "Esta es una notificación estándar"
+  const {title , message} = event.data.json();
+  self.registration.showNotification( title, {
+    body: message
   });
 });

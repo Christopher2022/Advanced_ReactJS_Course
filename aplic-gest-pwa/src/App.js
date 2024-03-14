@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Updater from './components/sw/Updater';
+import NotificationsManager from './components/pure/NotificationsManager';
 
 function App() {
-  const version = "app-V3-Front";
+  // const version = "app-V3-Front";
   return (
     <div className="App">
-      <h1 className='h1-color'>Versión {version}</h1>
-      <header className="App-header">
+      {/* <h1 className='h1-color'>Versión {version}</h1> */}
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,7 +21,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <NotificationsManager/>
       <Updater />
     </div>
   );
