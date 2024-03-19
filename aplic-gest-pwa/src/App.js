@@ -1,29 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import Updater from './components/sw/Updater';
-import NotificationsManager from './components/pure/NotificationsManager';
+// import Updater from './components/sw/Updater';
+// import NotificationsManager from './components/pure/NotificationsManager';
+import Todo from './testcomponents/Todo';
 
 function App() {
   // const version = "app-V3-Front";
+
+  const todos = [
+    {id:1 , text:"Hacer la cama", completed:true },
+    {id:2 , text:"Cocinar", completed:false },
+    {id:3 , text:"Hacer la cama", completed:false }
+
+  ]
   return (
     <div className="App">
-      {/* <h1 className='h1-color'>Versión {version}</h1> */}
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <NotificationsManager/>
-      <Updater />
+       <h1 style={{color: '#F76765'}}>Bienvenid@</h1>
+       {todos.map(todo => <Todo todo={todo}/>)}
+      {/* <NotificationsManager/>
+      <Updater /> */}
     </div>
   );
 }
