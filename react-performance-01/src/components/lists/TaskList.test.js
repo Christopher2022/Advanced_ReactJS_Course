@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { render } from "@testing-library/react";
 import TaskList from "./TaskList"
 import React from "react"
 
