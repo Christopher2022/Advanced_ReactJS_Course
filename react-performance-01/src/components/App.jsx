@@ -1,6 +1,6 @@
 import React from "react";
 import TaskList from "./lists/TaskList";
-import Settings from "./settings/Settings";
+// import Settings from "./settings/Settings";
 
 
 

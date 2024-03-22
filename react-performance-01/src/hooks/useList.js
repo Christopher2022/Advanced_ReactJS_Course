@@ -22,7 +22,7 @@ const useList = (initialValue = []) => {
 
     // TODO: Develop more function for lists
 
-    return { value, setValue,push, remove, isEmpty,};
+    return { value, setValue,push, remove, isEmpty};
 };
 
 export default useList;
