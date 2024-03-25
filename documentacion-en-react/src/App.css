@@ -1,5 +1,15 @@
+
+h1 {
+  margin: 0;
+}
+
+
+/**  para que pinte toda la pantalla el 'vh' */
+
 .App {
   text-align: center;
+  height: 100vh; 
+  transition: 0.3s;
 }
 
 .App-logo {
@@ -36,3 +46,23 @@
     transform: rotate(360deg);
   }
 }
+
+.App.dark{
+  background-color: #282c34;
+  color: white;
+  transition: 0.3s;
+}
+
+.toggleDark{
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.dark .toggleDark{
+  background-color: #172f60;
+  color           : white;
+  cursor: pointer;
+}
+
