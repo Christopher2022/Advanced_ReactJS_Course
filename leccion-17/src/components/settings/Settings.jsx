@@ -24,7 +24,7 @@ export default function Settings({ toggleDark }) {
   };
 
   return (
-    <div className="text-right">
+    <div className="text-center">
       <hr className="my-4" />
       <h1 className="text-3xl text-cyan-800 font-semibold mb-4 dark:text-cyan-400">APP SETTINGS</h1>
       <p className="text-sm">Actual Config: <span className="italic">{config.theme}</span> </p>

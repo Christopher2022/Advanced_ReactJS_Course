@@ -70,11 +70,11 @@ const TaskList = ({ showSettings, setShowSettings }) => {
       <header className="flex justify-between">
         <h1 className="text-3xl text-sky-700 font-semibold dark:text-sky-300">Task List</h1>
         <motion.button
-          whileHover={{ scale: 1.1}}
-          whileTap={{ scale:0.9}}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           className="btn"
           onClick={() => setShowSettings(!showSettings)}
-          >
+        >
           {!showSettings ? "Show Settings" : "Hide Settings"}
         </motion.button>
       </header>
@@ -97,18 +97,23 @@ const TaskList = ({ showSettings, setShowSettings }) => {
       ) : (
         <ul>
           {tasklist.map((item, index) => (
-            <li key={index}>
-              <input
-                type="checkbox"
-                // onClick={() => removeItem(index)}
-                onClick={() => toggleCompleteItem(index)}
-                checked={item.completed}
-                onChange={() => { }}
-              />
-              <span className={`ml-2 text-gray-800 text-sm italic dark:text-sky-100 ${item.completed && "line-through"}`}>
-                {item.task}
-              </span>
-            </li>
+            <motion.li
+              initial={{ x: '100vw' }}
+              animate={{ x: 0 }}
+              key={index}>
+              <label>
+                <input
+                  type="checkbox"
+                  // onClick={() => removeItem(index)}
+                  onClick={() => toggleCompleteItem(index)}
+                  checked={item.completed}
+                  onChange={() => { }}
+                />
+                <span className={`ml-2 text-gray-800 text-sm italic dark:text-sky-100 ${item.completed && "line-through"}`}>
+                  {item.task}
+                </span>
+              </label>
+            </motion.li>
           ))}
         </ul>
       )}
