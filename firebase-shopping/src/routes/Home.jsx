@@ -3,8 +3,9 @@ import React from 'react'
 const Home = () => {
     return (
         <div>
-            Bienvenid@ a FireShopping
+            <h1>Bienvenid@ a FireShopping</h1>
         </div>
+        
     )
 }
 
