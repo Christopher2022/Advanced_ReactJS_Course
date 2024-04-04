@@ -3,7 +3,7 @@ import { SiFirebase } from "react-icons/si";
 import { AppContext } from '../App';
 
 const Header = () => {
-    const { route, setRoute } = useContext(AppContext);
+    const { setRoute } = useContext(AppContext);
 
     return (
         <header className='h-20 w-full bg-gray-100 shadow-lg flex items-center justify-between px-8'>

@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
 
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const creaUsuario = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        // ...
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    creaUsuario();
+  }
+
+
   return (
-    <div>
-      Esta es el register
+    <div className='flex flex-col gap-4 items-center'>
+      <h1 className='text-sky-600 font-semibold text-center'>Registrate para obtener acceso a la mejor app del mundo!</h1>
+      <form onSubmit={handleSubmit} className=' flex flex-col gap-2 max-w-sm'>
+        <input className='border border-gray-500 rounded py-1 px-2 outline-none'
+          type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input className='border border-gray-500 rounded py-1 px-2 outline-none'
+          type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <button className='bg-sky-400 py-1 text-white rounded shadow'>Registrarte</button>
+      </form>
     </div>
   )
 }
