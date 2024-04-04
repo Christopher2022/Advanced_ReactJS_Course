@@ -18,7 +18,7 @@ const Register = () => {
         console.log(user);
         toast(`Usuario ${email} registrado correctamente!`)
         setUser(user)
-        setRoute("Home");
+        setRoute("home");
       })
       .catch((error) => {
         const errorCode = error.code;

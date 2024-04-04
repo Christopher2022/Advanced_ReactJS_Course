@@ -11,16 +11,17 @@ export const AppContext = createContext(null);
 
 function App() {
 
-  const [route, setRoute] = useState("Home");
+  const [route, setRoute] = useState("home")
   const [user, setUser] = useState(null);
+  console.log(user);
   return (
     <AppContext.Provider value={{ route, setRoute, user, setUser }}>
       <Toaster/>
       <Header />
       <main className='p-6'>
-        { route === "Home" && <Home />}
-        { route === "Login" && <Login />}
-        { route === "Register" && <Register />}
+        { route === "home" && <Home />}
+        { route === "login" && <Login />}
+        { route === "register" && <Register />}
         {user && <p>Usuario logueado:{user.email}</p>}
       </main>
     </AppContext.Provider>
