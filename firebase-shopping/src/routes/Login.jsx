@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { GoogleAuthProvider, getAuth, signInWithPopup, signInWithEmailAndPassword} from "firebase/auth";
 import toast from 'react-hot-toast';
 import { AppContext } from '../App';
+import { FcGoogle } from "react-icons/fc";
 
 
 const auth = getAuth();
@@ -67,7 +68,8 @@ const Login = () => {
                     type="password" value={password} onChange={e => setPassword(e.target.value)} />
                 <button className='bg-sky-400 py-1 text-white rounded shadow'>Log in</button>
             </form>
-            <button onClick={hazLoginGoogle}>Login con Google</button>
+            
+            <button onClick={hazLoginGoogle}><FcGoogle className='text-3xl' /> Google</button>
         </div>
     </div>
     )
