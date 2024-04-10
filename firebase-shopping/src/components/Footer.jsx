@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { IoHomeSharp } from "react-icons/io5";
-import { BsFillCartFill } from "react-icons/bs"
+import { BsFillCartFill, BsList } from "react-icons/bs"
 import { AppContext } from '../App';
 
 
@@ -13,6 +13,9 @@ const Footer = () => {
             </div>
             <div className="bg-sky-200 p-2 text-3xl rounded-full text-pink-500 cursor-pointer hover:bg-sky-50 transition" onClick={() => setRoute('shopping')}>
                 <BsFillCartFill />
+            </div>
+            <div className="bg-sky-200 p-2 text-3xl rounded-full text-pink-500 cursor-pointer hover:bg-sky-50 transition" onClick={() => setRoute('tasklist')}>
+                <BsList />
             </div>
         </footer>
     )

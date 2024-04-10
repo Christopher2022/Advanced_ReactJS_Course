@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import Login from './routes/Login';
 import Register from './routes/Register';
 import Shopping from './routes/Shopping';
+import TaskList from './routes/TaskList';
 import { Toaster, toast } from 'react-hot-toast';
 import { onMessage } from "firebase/messaging"
 
@@ -38,6 +39,7 @@ function App() {
           {route === "login" && <Login />}
           {route === "register" && <Register />}
           {route === "shopping" && <Shopping />}
+          {route === "tasklist" && <TaskList />}
           {user && <p>Usuario logueado:{user.email}</p>}
         </main>
             <Footer/>

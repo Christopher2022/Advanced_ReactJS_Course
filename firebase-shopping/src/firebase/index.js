@@ -2,7 +2,8 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { getMessaging, getToken } from "firebase/messaging"
+import { getMessaging, getToken } from "firebase/messaging";
+import { getFirestore } from "firebase/firestore";
 
 const vapidKey = "BDYsBxUI6tV2ks0sq9X-i8ePoUKlGiXmF7FH0fJEMkfTfwK1vBibYpUnHarDhCp9yszwGgSo8bWFl5x6Yx2uGyk";
 
@@ -44,3 +45,5 @@ getToken(messaging, { vapidKey })
     // TO-DO: Implementar la lógica de que en el servidor se almacene el token
     localStorage.setItem('tokenSentToServer', '1');
   }
+
+  export const db = getFirestore();
