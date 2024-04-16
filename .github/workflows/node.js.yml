@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        working-directory: .
+        working-directory: /home/runner/work/Advanced_ReactJS_Course/Advanced_ReactJS_Course/leccion-17/package.json
     - run: npm install
     - run: npm ci && CI='' npm run build
     - uses: FirebaseExtended/action-hosting-deploy@v0
