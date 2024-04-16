@@ -24,3 +24,4 @@ jobs:
         firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TASKLIST_FIREBASE_93DA3 }}'
         channelId: live
         projectId: tasklist-firebase-93da3
+        
